@@ -5,7 +5,7 @@ A PHP implementation of the automated AHP ranking algorithm.
 
 This algorithm ranks data based on ordinal features. For example, a dataset containing marks of two subjects (i.e. features). It functions like normal summing method, but instead of calculating summation of each objects, AHP compares each objects in pairwise in determining the dominancy of the objects in each features. 
 
-Limitations
+<h1>Limitations</h1>
 
 This automated AHP only works with ordinal features as pairwise comparison will be done automatically after each features are normalized.
 
