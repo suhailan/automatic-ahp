@@ -17,11 +17,13 @@ The algorithm requires three kind of data:
 
 Example of data as the following:
 > $criteria =array ("CW","FINAL");
-$alternativeid = array("ID1","ID2","ID3");
-$alternative = array(
-			array("27.5","23.33","22.5"), //CW
-			array("8","14","17.5"), //FINAL
-		);
+
+> $alternativeid = array("ID1","ID2","ID3");
+
+> $alternative = array(
+			> array("27.5","23.33","22.5"), //CW
+			> array("8","14","17.5"), //FINAL
+		> );
 
 License
 
