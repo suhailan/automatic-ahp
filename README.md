@@ -12,15 +12,12 @@ This automated AHP only works with ordinal features as pairwise comparison will 
 
 The algorithm requires three kind of data:
 - List of criteria (e.g. Coursework marks and Final marks)
-- List of alternatives' id (e.g. Name1, Name2, ...)
-- List of alternatives' features
-
-
-Example of data as the following:
 > $criteria =array ("CW","FINAL");
 
+- List of alternatives' id (e.g. Name1, Name2, ...)
 > $alternativeid = array("ID1","ID2","ID3");
 
+- List of alternatives' features
 > $alternative = array(
 
 > 					array("27.5","23.33","22.5"), //CW
