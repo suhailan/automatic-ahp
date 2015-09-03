@@ -22,8 +22,11 @@ The algorithm requires three kind of data:
 - List of alternatives' features
 
 > $alternative = array(
+
 > 					array("27.5","23.33","22.5"), //CW
+
 > 					array("8","14","17.5"), //FINAL
+
 > 				);
 
 #License
