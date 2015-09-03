@@ -11,6 +11,11 @@ This automated AHP only works with ordinal features as pairwise comparison will 
 #Usage
 
 The algorithm requires three kind of data:
+- List of criteria
+- List of alternatives' id
+- List of alternatives' features
+
+
 1. List of criteria (e.g. Coursework marks and Final marks)
 2. List of alternatives' id (e.g. Name1, Name2, ...)
 3. List of alternatives' features (define in array)
