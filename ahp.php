@@ -97,8 +97,9 @@ class AHP
 		return $this->aggregated_result;
 	}
 	
-	public function RankPosition(array $a){
-		$rank=count($a);
+	public function RankPosition(array $a,$ordertype){
+		if ($ordertype==1) $rank=count($a); //1 - Descending order, Others - Ascending order
+		else $rank=1;
 		$array = $a;
 		$rank_position = array();
 		while (sizeof($array) > 0)
@@ -115,14 +116,15 @@ class AHP
 				if ($max==0.00969)echo "$max<br>";
 				$count++;
 			}						
-			$rank = $rank - $count;
+			if ($ordertype==1) $rank = $rank - $count;
+			else $rank = $rank + $count;
 		}
 		ksort($rank_position);
 		return $rank_position;
 	}
 	
 	
-	public function RankAggregate(array $a){		
+	public function RankAggregate(array $a, $ordertype){		
 		$N = count($a);
 		$countAlt = count($this->alternative_id);		
 		$countCriteria = count($this->criteria);
@@ -133,7 +135,7 @@ class AHP
 			}
 			$this->ranking_result[$i] = $this->ranking_result[$i] / $countCriteria;			
 		}						
-		$pos = $this->RankPosition($this->ranking_result);
+		$pos = $this->RankPosition($this->ranking_result,$ordertype);
 		$ahp_result = array_map(null, $this->alternative_id,$this->ranking_result,$pos);		
 		return $ahp_result;
 	}
